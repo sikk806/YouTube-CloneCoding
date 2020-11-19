@@ -4,10 +4,18 @@ import Video from "../models/Video";
 
 // async : JS를 기다리게 하는 것.
 export const home = async(req, res) => {
+    try{
     // DB의 모든 Video를 가져온다.
     // await는 async가 없으면 못쓴다.
     const videos = await Video.find({});
+    // await가 끝나기 전까지는 render 진행하지 않음.
     res.render("Home", { pageTitle: "Home", videos });
+    } 
+    // catch가 없으면 Error를 잡지 못한다.
+    catch(error) {
+        console.log(error);
+        res.render("Home", { pageTitle: "Home", videos });
+    }
 };
 
 export const search = (req, res) => {
