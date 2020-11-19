@@ -1,0 +1,7 @@
+//- mixin에 인자가 입력되면 객체의 이름은 video가 된다.
+mixin videoBlock(video = {})
+    .videoBlock
+        a(href=routes.videoDetail(video.id))
+            video.videoBlock__thumbnail(src=video.videoFile)
+            h4.videoBlock__title=video.title
+            h6.videoBlock__views=video.views

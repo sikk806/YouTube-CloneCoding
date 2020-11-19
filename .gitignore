@@ -1,3 +1,4 @@
 .git
 .gitattributes
-ServerPrac/node_modules
+node_modules
+.env
