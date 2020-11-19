@@ -1,7 +1,12 @@
 // import {videos} from "../db";
 import routes from "../routes";
+import Video from "../models/Video";
 
-export const home = (req, res) => {
+// async : JS를 기다리게 하는 것.
+export const home = async(req, res) => {
+    // DB의 모든 Video를 가져온다.
+    // await는 async가 없으면 못쓴다.
+    const videos = await Video.find({});
     res.render("Home", { pageTitle: "Home", videos });
 };
 
