@@ -33,8 +33,9 @@ export const postUpload = (req, res) => {
             file, title, description
         }
     } = req;
+    console.dir(file, title, description);
     // To Do: Upload and save video
-    res.redirect(routes.videoDetail('3333'));
+    res.redirect(routes.videoDetail(3333));
 };
 
 export const videoDetail = (req, res) => res.render("videoDetail", { pageTitle: "Video Detail"});
