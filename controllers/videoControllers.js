@@ -7,7 +7,7 @@ export const home = async(req, res) => {
     try{
     // DB의 모든 Video를 가져온다.
     // await는 async가 없으면 못쓴다.
-    const videos = await Video.find({});
+    const videos = await Video.find({}).sort({ _id: -1 });
     // await가 끝나기 전까지는 render 진행하지 않음.
     res.render("Home", { pageTitle: "Home", videos });
     } 
@@ -51,7 +51,7 @@ export const videoDetail = async(req, res) => {
     try {
         const video = await Video.findById(id);
         console.log(video);
-        res.render("videoDetail", { pageTitle: "Video Detail", video });
+        res.render("videoDetail", { pageTitle: video.title, video });
     } catch (error) {
         res.redirect(routes.home);
     }
@@ -82,4 +82,14 @@ export const postEditVideo = async(req, res) => {
     }
 };
 
-export const deleteVideo = (req, res) => res.render("deleteVideo", { pageTitle: "Delete Video"});
+export const deleteVideo = async(req, res) => {
+    const {
+        params: {id}
+    } = req;
+    try{
+        await Video.findOneAndRemove({ _id: id});
+    } catch(error) {
+        
+    }
+    res.redirect(routes.home);
+}
