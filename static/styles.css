@@ -136,6 +136,35 @@ input {
   input:focus, input:active {
     outline: none; }
 
+html,
+body {
+  height: 100%; }
+
+body {
+  background-color: #f5f5f5;
+  color: #444444;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 14px; }
+
+main {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 70vh; }
+
+button,
+input {
+  padding: 7px 10px;
+  width: 100%;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #444444;
+  font-weight: 600; }
+  button::placeholder,
+  input::placeholder {
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.7); }
+
 .header {
   background-color: #ea232c;
   margin-bottom: 50px; }
@@ -175,5 +204,64 @@ input {
         .header .header__wrapper .header__column form input::placeholder {
           font-weight: 300;
           color: rgba(0, 0, 0, 0.7); }
+
+.footer {
+  margin-top: 50px;
+  padding-top: 50px;
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .footer .footer__icon {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 40px;
+    margin-bottom: 20px; }
+  .footer .footer__text {
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: 800; }
+
+.form-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .form-container form {
+    width: 100%;
+    max-width: 320px;
+    margin-bottom: 20px; }
+    .form-container form input {
+      display: block;
+      width: 100%;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
+      .form-container form input:not(:last-child) {
+        margin-bottom: 25px; }
+    .form-container form input[type="submit"] {
+      background-color: #2ecc71;
+      color: white; }
+
+.social-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%; }
+  .social-login button {
+    width: 100%;
+    max-width: 320px;
+    display: flex;
+    justify-content: center; }
+    .social-login button:not(:last-child) {
+      margin-bottom: 15px; }
+    .social-login button span {
+      margin-right: 10px;
+      font-size: 15px; }
+  .social-login .social-login__github {
+    background-color: black;
+    color: white; }
+  .social-login .social-login__facebook {
+    background-color: #3a5998;
+    color: white; }
 
 /*# sourceMappingURL=styles.css.map*/
