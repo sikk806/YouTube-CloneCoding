@@ -156,14 +156,20 @@ button,
 input {
   padding: 7px 10px;
   width: 100%;
+  border: none;
   border-radius: 5px;
   font-size: 14px;
   color: #444444;
-  font-weight: 600; }
+  font-weight: 600;
+  max-width: 320px; }
   button::placeholder,
   input::placeholder {
     font-weight: 300;
     color: rgba(0, 0, 0, 0.7); }
+
+button {
+  background-color: #3498db;
+  color: white; }
 
 .header {
   background-color: #ea232c;
@@ -263,5 +269,34 @@ input {
   .social-login .social-login__facebook {
     background-color: #3a5998;
     color: white; }
+
+.video-detail__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .video-detail__container .video__info {
+    width: 100%;
+    max-width: 850px;
+    margin-top: 25px; }
+    .video-detail__container .video__info button {
+      width: 100px;
+      margin-bottom: 15px; }
+    .video-detail__container .video__info .video__title,
+    .video-detail__container .video__info .video__views,
+    .video-detail__container .video__info .video__description {
+      display: block;
+      margin-bottom: 15px; }
+    .video-detail__container .video__info .video__title {
+      font-size: 22px;
+      font-weight: 500; }
+    .video-detail__container .video__info .video__views {
+      font-size: 13px; }
+    .video-detail__container .video__info .video__description {
+      font-size: 18px; }
+  .video-detail__container .video__comments {
+    margin-top: 25px; }
+    .video-detail__container .video__comments .video__comment-number {
+      font-size: 18px;
+      font-weight: 500; }
 
 /*# sourceMappingURL=styles.css.map*/
