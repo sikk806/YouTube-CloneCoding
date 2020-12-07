@@ -8,19 +8,20 @@
     max-width: 320px;
     display: flex;
     justify-content: center;
+    align-items: center;
     &:not(:last-child) {
       margin-bottom: 15px;
     }
     span {
       margin-right: 10px;
-      font-size: 15px;
+      font-size: 20px;
     }
   }
-  .social-login__github {
-    background-color: black;
+  .social-login--github {
+    background-color: $black;
     color: white;
   }
-  .social-login__facebook {
+  .social-login--facebook {
     background-color: #3a5998;
     color: white;
   }
